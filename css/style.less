@@ -1,4 +1,138 @@
 @font-family: 'Open Sans', helvetica, arial, sans-serif;
+/*
+ *INICIO DE ESTILOS DE LAS CLASES GENERALES DE HTML
+ */
 html,body{
 
+}
+div{
+    position: relative;
+}
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    &:hover{ text-decoration: none !important; }
+}
+h3{
+    padding-left: 25px;
+    .have-icon-left;
+}
+/*
+ *FIN DE ESTILOS DE LAS CLASES GENERALES DE HTML
+ *
+ *INCIO DE CLASES MULTIPLES Y VARIABLES REPETITIVAS
+ */
+@color-facebook: #355089;
+@color-twitter: #1DA1F2;
+@color-google: #FF3D00;
+.disabled{ display: none; }
+.on{ display: block; }
+.center-y{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+}
+.center-x{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+}
+.have-icon-left{
+    position: relative;
+    i{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+/*
+ *FIN DE CLASES MULTIPLES Y VARIABLES REPETITIVAS
+ *
+ *INCIO DE ESTILOS DE CSS
+ */
+.form-group{
+    i{
+        right: 5px;
+        opacity: 0.7;
+        .center-y;
+    }
+}
+.share{
+    height: 40px;
+    margin-bottom: 10px;
+    a{
+        display: block;
+        max-width: 120px;
+        border-radius: 5px;
+        padding: 5px 10px;
+        .center-x;
+        i{
+            margin-right: 5px;
+            font-size: 24px;
+            vertical-align: middle;
+        }
+        &.f{
+            border: 1px @color-facebook solid;
+            i{ color: @color-facebook; }
+        }
+        &.t{
+             border: 1px @color-twitter solid;
+             i{ color: @color-twitter; }
+        }
+        &.g{
+             border: 1px @color-google solid;
+             i{ color: @color-google; }
+        }   
+    }
+}
+.list{
+    &.inputSearch{
+        li{
+            position: relative;
+            padding: 0 0 0 50px;
+            min-height: 50px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            img{
+                max-width: 45px;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+            h4{ margin: 0 0 5px; }
+        }
+    }
+    &.top{
+        text-align: center;
+        li{
+            max-width: 205px;
+            padding: 0 10px;
+            display: inline-block;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+/*
+ *FIN DE ESTILOS DE CSS
+ *
+ *INCIO DE MEDIA QUERY Y DISEÑO RESPONSIVE
+ */
+@media screen and (min-width: 992px){
+    .list{
+        &.top{
+            text-align: left;    
+        }
+    }
 }

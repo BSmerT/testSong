@@ -1,0 +1,152 @@
+/*
+ *INICIO DE ESTILOS DE LAS CLASES GENERALES DE HTML
+ */
+div {
+  position: relative;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none !important;
+}
+h3 {
+  padding-left: 25px;
+  position: relative;
+}
+h3 i {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/*
+ *FIN DE ESTILOS DE LAS CLASES GENERALES DE HTML
+ *
+ *INCIO DE CLASES MULTIPLES Y VARIABLES REPETITIVAS
+ */
+.disabled {
+  display: none;
+}
+.on {
+  display: block;
+}
+.center-y {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+}
+.center-x {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+}
+.have-icon-left {
+  position: relative;
+}
+.have-icon-left i {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/*
+ *FIN DE CLASES MULTIPLES Y VARIABLES REPETITIVAS
+ *
+ *INCIO DE ESTILOS DE CSS
+ */
+.form-group i {
+  right: 5px;
+  opacity: 0.7;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+}
+.share {
+  height: 40px;
+  margin-bottom: 10px;
+}
+.share a {
+  display: block;
+  max-width: 120px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+}
+.share a i {
+  margin-right: 5px;
+  font-size: 24px;
+  vertical-align: middle;
+}
+.share a.f {
+  border: 1px #355089 solid;
+}
+.share a.f i {
+  color: #355089;
+}
+.share a.t {
+  border: 1px #1DA1F2 solid;
+}
+.share a.t i {
+  color: #1DA1F2;
+}
+.share a.g {
+  border: 1px #FF3D00 solid;
+}
+.share a.g i {
+  color: #FF3D00;
+}
+.list.inputSearch li {
+  position: relative;
+  padding: 0 0 0 50px;
+  min-height: 50px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.list.inputSearch li img {
+  max-width: 45px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.list.inputSearch li h4 {
+  margin: 0 0 5px;
+}
+.list.top {
+  text-align: center;
+}
+.list.top li {
+  max-width: 205px;
+  padding: 0 10px;
+  display: inline-block;
+}
+.list.top li img {
+  width: 100%;
+}
+/*
+ *FIN DE ESTILOS DE CSS
+ *
+ *INCIO DE MEDIA QUERY Y DISEÑO RESPONSIVE
+ */
+@media screen and (min-width: 992px) {
+  .list.top {
+    text-align: left;
+  }
+}
