@@ -5,6 +5,9 @@
 html,body{
 
 }
+body{
+    background: #181818 !important;
+}
 div{
     position: relative;
 }
@@ -17,9 +20,12 @@ a{
     text-decoration: none;
     &:hover{ text-decoration: none !important; }
 }
-h3{
-    padding-left: 25px;
-    .have-icon-left;
+h1,h2,h3,h4{ color: #A0A0A0 !important; }
+h1{
+    margin-bottom: 15px;
+}
+form{
+    margin-bottom: 20px;
 }
 /*
  *FIN DE ESTILOS DE LAS CLASES GENERALES DE HTML
@@ -29,6 +35,7 @@ h3{
 @color-facebook: #355089;
 @color-twitter: #1DA1F2;
 @color-google: #FF3D00;
+.nopad{ padding: 0 !important; }
 .disabled{ display: none; }
 .on{ display: block; }
 .center-y{
@@ -48,11 +55,12 @@ h3{
     -moz-transform: translateX(-50%);
 }
 .have-icon-left{
+    padding-left: 25px;
     position: relative;
     i{
         position: absolute;
-        top: 0;
         left: 0;
+        .center-y;
     }
 }
 /*
@@ -60,56 +68,85 @@ h3{
  *
  *INCIO DE ESTILOS DE CSS
  */
+#search{
+    height: 50px;
+    font-size: 20px;
+    font-weight: lighter;
+}
 .form-group{
     i{
-        right: 5px;
+        right: 10px;
         opacity: 0.7;
+        font-size: 24px;
         .center-y;
+    }
+}
+.song{
+    margin-bottom: 40px;
+    color: #A0A0A0;
+    .view{
+        text-align: center;
+        b,em{
+            display: block;
+        }    
+    }
+    .info{
+        p{
+            font-size: 18px;
+            .have-icon-left;
+            i{ color: #FFF; }
+        }
+        li{
+            margin-bottom: 7px;
+            a{ color: #A0A0A0; }
+            &:hover a{
+                color: #FFF;
+            }
+        }
     }
 }
 .share{
     height: 40px;
     margin-bottom: 10px;
     a{
+        color: #9E9E9E;
         display: block;
-        max-width: 120px;
-        border-radius: 5px;
-        padding: 5px 10px;
+        border-radius: 20px;
+        padding: 5px 20px;
+        background: #202020;
+        border: 1px #9E9E9E solid;
         .center-x;
         i{
             margin-right: 5px;
-            font-size: 24px;
+            font-size: 18px;
             vertical-align: middle;
         }
-        &.f{
-            border: 1px @color-facebook solid;
-            i{ color: @color-facebook; }
+        &:hover{
+            color: #FFF;
+            background: #282828;
         }
-        &.t{
-             border: 1px @color-twitter solid;
-             i{ color: @color-twitter; }
-        }
-        &.g{
-             border: 1px @color-google solid;
-             i{ color: @color-google; }
-        }   
     }
 }
 .list{
+    color: #9E9E9E;
     &.inputSearch{
         li{
             position: relative;
-            padding: 0 0 0 50px;
+            padding: 10px 0 10px 60px;
             min-height: 50px;
             margin-bottom: 15px;
             cursor: pointer;
+            border-radius: 5px;
             img{
                 max-width: 45px;
                 position: absolute;
-                left: 0;
-                top: 0;
+                left: 10px;
+                top: 10px;
             }
             h4{ margin: 0 0 5px; }
+            &:hover{
+                background: #282828;
+            }
         }
     }
     &.top{
@@ -132,7 +169,7 @@ h3{
 @media screen and (min-width: 992px){
     .list{
         &.top{
-            text-align: left;    
+            //text-align: left;    
         }
     }
 }
