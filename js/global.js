@@ -18,12 +18,10 @@ $(document).ready(function() {
         showAndPlay(datag.tracks.items[$(this).data('value')]);    
     });
     
-    userId = "digsterchile";
-    ListT = "4i9ilOIkmFL4bn1Xag1G5n";
-    getListTop(userId, ListT);
+    getListTop();
 });
 
-function searchSong(value, types) {
+function searchSong(value) {
     spotifyApi.searchTracks(value, {limit: 5})
     .then(function(data) {
         clearDiv("inputSearch");
@@ -40,7 +38,7 @@ function showAndPlay(songData) {
     $('.view').html("<img alt='Album' src='"+songData.album.images[1].url+"'><h4>"+songData.name+"</h4><b>By "+ songData.artists[0].name +" </b><em>Albúm "+ songData.album.name +"</em>");
 }
 
-function getListTop(user,list) {
+function getListTop() {
     spotifyApi.getPlaylistTracks('spotifyenchile','2Q3ZdOPitcusSmSXhmdIDB',{limit: 10})
     .then(function(data) {
         console.log(data);
