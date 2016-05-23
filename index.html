@@ -8,21 +8,22 @@
         <meta name="author" content="Fabian Zurita">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300' rel='stylesheet' type='text/css'>
         
-        <link rel="stylesheet/less" type="text/css" href="css/style.less">
+        <!--<link rel="stylesheet/less" type="text/css" href="css/style.less">-->
+        <link rel="stylesheet" type="text/css" href="css/animation.css">
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" type="text/css" href="font/css/font-awesome.min.css">
-        <!--<link rel="stylesheet" type="text/css" href="/css/style.css">-->
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
         
         <script src="js/libs/jquery-1.8.2.min.js" type="text/javascript"></script>
         <script src="js/libs/spotify-web-api.js" type="text/javascript"></script>
-        <script src="js/dev/less-1.7.0.min.js" type="text/javascript"></script>
+        <!--<script src="js/dev/less-1.7.0.min.js" type="text/javascript"></script>-->
         <script src="js/global.js" type="text/javascript"></script>
        
     </head>
     <body>
         <header>
-           <nav class="navbar navbar-inverse">
+           <nav class="navbar">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="#">
                       <img alt="Brand" src="img/logo.png">
@@ -30,104 +31,92 @@
                 </div>
           </nav>
         </header>
-        <div class="container">
-
-            <div class="row">
-                <form class="col-xs-12">
-                    <div class="form-group">
-                        <h1 class="text-center">Bienvenido a NONAme. aqui podras buscar y escuchar la música que más te gusta</h1>
+        <div class="container-fluid bck-home">
+            <main class="container">
+                <div class="row">
+                    <form class="col-xs-12">
+                        <div class="form-group">
+                            <h1 class="text-center">Ingresa aqui la música que desees buscar</h1>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="search" placeholder="Canción a buscar..." autocomplete="off">
+                            <i class="fa fa-search icon-search" aria-hidden="true"></i>
+                        </div>
+                        <div class="form-group msg disabled">
+                            <p><i class="fa fa-exclamation-circle" aria-hidden="true"></i>Alto ahí campeón! Debes ingresar más de 3 caracteres para poder ver algunos resultados!</p>
+                        </div>
+                        <div class="form-group">
+                            <ul class="list inputSearch">
+                                <!--<li>
+                                    <img alt="Album" src="img/img-album.png">
+                                    <h4>Where is my cat!</h4>
+                                    <b>By Mr. Cat</b>
+                                    <em>Albúm rat's faggot</em>
+                                </li>
+                                <li>
+                                    <img alt="Album" src="img/img-album.png">
+                                    <h4>Where is my cat!</h4>
+                                    <b>By Mr. Cat</b>
+                                    <em>Albúm rat's faggot</em>
+                                </li>-->
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 song disabled">
+                        <div class="col-xs-12 col-sm-7 col-md-4 view">
+                            <img alt="Album" src="">
+                            <iframe src="" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>
+                            <div class="fuck"><i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i></div>
+                        </div>
+                        <div class="col-xs-12 info-click show-xs">
+                            <a href="#" title="Mostrar información"><i class="fa fa-chevron-circle-down" aria-hidden="true"></i>Detalles</a>
+                        </div>
+                        <div class="col-xs-12 col-sm-5 col-md-8 hidden-xs info">
+                            <ul>
+                                <li><i class="fa fa-music fa-2x" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-user fa-2x" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-folder-open fa-2x" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-tag fa-2x" aria-hidden="true"></i></li>
+                                <li><a href="" title="Ir a spotify" target="_blank"><i class="fa fa-spotify fa-2x" aria-hidden="true"></i> Escuchar album completo en Spotify</a></li>
+                            </ul>
+                            <div class="col-xs-12 nopad">
+                                <div class="col-xs-12 col-sm-12 col-md-12 share">
+                                    <a onclick="" href="javascript:void(0)" title="Compartir en Facebook" class="f"><i class="fa fa-facebook-square" aria-hidden="true"></i>Compartir</a>
+                                    <a onclick="" href="javascript:void(0)" title="Compartir en Twitter" class="t"><i class="fa fa-twitter-square" aria-hidden="true"></i>Compartir</a>
+                                    <a onclick="" href="javascript:void(0)" title="Compartir en Google" class="g"><i class="fa fa-google-plus-square" aria-hidden="true"></i>Compartir</a>    
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <!--<iframe src="https://embed.spotify.com/?uri=spotify%3Atrack%3A6wwdpY9s151fL9HgPCtIhg" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>-->
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="search" placeholder="Canción a buscar..." autocomplete="off">
-                        <i class="fa fa-search icon-search" aria-hidden="true"></i>
-                    </div>
-                    <div class="form-group msg disabled">
-                        <p><i class="fa fa-exclamation-circle" aria-hidden="true"></i>Alto ahí campeón! Debes ingresar más de 3 caracteres para poder ver algunos resultados!</p>
-                    </div>
-                    <div class="form-group">
-                        <ul class="list inputSearch">
-                            <!--<li>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                        <h3><i class="fa fa-star" aria-hidden="true"></i>Top 10 éxitos en Chile</h3>
+                        <ul class="list top">
+                            <!--
+                            <li>
                                 <img alt="Album" src="img/img-album.png">
                                 <h4>Where is my cat!</h4>
                                 <b>By Mr. Cat</b>
                                 <em>Albúm rat's faggot</em>
                             </li>
-                            <li>
-                                <img alt="Album" src="img/img-album.png">
-                                <h4>Where is my cat!</h4>
-                                <b>By Mr. Cat</b>
-                                <em>Albúm rat's faggot</em>
-                            </li>-->
+                            -->
                         </ul>
                     </div>
-                </form>
-            </div>
-            <div class="row">
-                <div class="col-xs-12 col-md-6 song">
-                    <div class="col-xs-12 col-sm-4 col-md-8 view">
-                        <!--
-                        <img alt="Album" src="img/img-album.png">
-                        <h4>Where is my cat!</h4>
-                        <b>By Mr. Cat</b>
-                        <em>Albúm rat's faggot</em>
-                        -->
-                    </div>
-                    <div class="col-xs-12 col-sm-8 col-md-4 hidden-xs info nopad">
-                        <!--
-                        <p><i class="fa fa-external-link-square" aria-hidden="true"></i>Links usables</p>
-                        <ul>
-                            <li>
-                                <a href="#" title="Ir a youtube">Buscar en Youtube</a>
-                            </li>
-                            <li>
-                                <a href="#" title="Ir a youtube">Buscar en Google</a>
-                            </li>
-                            <li>
-                                <a href="#" title="Ir a youtube">Ver Historia del grupo</a>
-                            </li>
-                            <li>
-                                <a href="#" title="Ir a youtube">Buscar imagenes del grupo</a>
-                            </li>
-                        </ul>
-                        -->
-                    </div>
+                    <!--<div class="hiden-xs col-md-4">
+                        
+                    </div>-->
                 </div>
-                <div class="col-xs-12 col-md-6 disabled">
-                    <div class="col-xs-12 col-sm-4 col-md-12 share">
-                        <a href="#" title="Compartir en Facebook" class="f"><i class="fa fa-facebook-square" aria-hidden="true"></i>Compartir</a>    
-                    </div>
-                    <div class="col-xs-12 col-sm-4 col-md-12 share">
-                        <a href="#" title="Compartir en Facebook" class="t"><i class="fa fa-twitter-square" aria-hidden="true"></i>Compartir</a>    
-                    </div>
-                    <div class="col-xs-12 col-sm-4 col-md-12 share ">
-                        <a href="#" title="Compartir en Facebook" class="g"><i class="fa fa-google-plus-square" aria-hidden="true"></i>Compartir</a>    
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12 text-center">
-                    <h3><i class="fa fa-star" aria-hidden="true"></i>Top 10 éxitos en Chile</h3>
-                    <ul class="list top">
-                        <!--
-                        <li>
-                            <img alt="Album" src="img/img-album.png">
-                            <h4>Where is my cat!</h4>
-                            <b>By Mr. Cat</b>
-                            <em>Albúm rat's faggot</em>
-                        </li>
-                        -->
-                    </ul>
-                </div>
-                <!--<div class="hiden-xs col-md-4">
-                    
-                </div>-->
-            </div>
+    
+            </main>
         </div>
         <div class="box-login">
             <div>
-                <h2>Bienvenido a NONAme test</h2>
-                <p>Eres bienvenido a probar una pagina web creada por una persona que quiere sobrevivir :c</p>
+                <h2>Bienvenido a NONAMe test</h2>
+                <p>Eres bienvenido a probar una pagina creada por una persona que no quiere morir de hambre :c</p>
+                <i>pd: Se hancen trabajos por comida.</i>
                 <button class="btn btn-primary one" id="btn-login">Login</button>
                 <button class="btn btn-primary two">Crear una cuenta</button>
                 <button class="btn btn-primary three">WTF! dude, I'm so fucking pro, let me in!</button>

@@ -86,11 +86,79 @@ form {
   -ms-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
 }
+.preview-show {
+  color: #FFF;
+  top: 18%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+}
+.fuck {
+  width: 300px;
+  height: 80px;
+  bottom: 5px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  z-index: -1;
+}
+.fuck i {
+  top: 20px;
+  position: relative;
+  color: #FFF;
+}
+.blur {
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
 /*
  *FIN DE CLASES MULTIPLES Y VARIABLES REPETITIVAS
  *
  *INCIO DE ESTILOS DE CSS
  */
+.navbar {
+  background: #000;
+  opacity: 0.6;
+  border-radius: 0;
+  margin-bottom: 0;
+  padding: 10px 0;
+}
+.bck-home:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.7;
+  z-index: -1;
+}
+.bck-home:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: url('http://lorempixel.com/900/600/fashion') no-repeat;
+  background-size: cover;
+  z-index: -2;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
 #search {
   height: 50px;
   font-size: 20px;
@@ -139,54 +207,46 @@ form {
 .song .view em {
   display: block;
 }
-.song .info p {
-  font-size: 18px;
-  padding-left: 30px;
+.song .view img,
+.song .view iframe {
+  margin: 0 29px 0 0;
+}
+.song .info {
+  margin-buttom: 40px;
+}
+.song .info ul {
+  margin-bottom: 20px;
+}
+.song .info ul li {
   position: relative;
+  padding: 15px 0;
+  text-align: center;
 }
-.song .info p i {
-  left: 0;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
+.song .info ul li i {
+  display: block;
 }
-.song .info p i {
-  color: #FFF;
-}
-.song .info li {
-  margin-bottom: 7px;
-}
-.song .info li a {
+.song .info ul li a {
   color: #A0A0A0;
 }
-.song .info li:hover a {
-  color: #FFF;
-}
 .share {
-  height: 40px;
   margin-bottom: 10px;
+  text-align: center;
 }
 .share a {
   color: #9E9E9E;
-  display: block;
+  display: inline-block;
   border-radius: 20px;
-  padding: 5px 20px;
+  padding: 5px 0;
+  width: 160px;
   background: #202020;
   border: 1px #9E9E9E solid;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
+  text-align: center;
+  margin: 0 0 15px 0;
 }
 .share a i {
-  margin-right: 5px;
-  font-size: 18px;
+  font-size: 24px;
   vertical-align: middle;
+  margin-right: 5px;
 }
 .share a:hover {
   color: #FFF;
@@ -225,17 +285,49 @@ form {
   vertical-align: top;
   margin-bottom: 10px;
   cursor: pointer;
+  position: relative;
 }
 .list.top li img {
   width: 100%;
 }
+.list.top li:hover:before {
+  content: "";
+  position: absolute;
+  width: 185px;
+  height: 185px;
+  background: #000;
+  top: 0;
+  opacity: 0.7;
+}
 .box-login {
-  background: black;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   position: fixed;
+}
+.box-login:after,
+.box-login:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+.box-login:after {
+  opacity: 0.6;
+  z-index: -1;
+}
+.box-login:before {
+  z-index: -2;
+  background: #000 url('http://lorempixel.com/900/600/nightlife') no-repeat;
+  background-size: cover;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
 }
 .box-login div {
   position: absolute;
@@ -247,10 +339,15 @@ form {
   -moz-transform: translate(-50%, -50%);
   text-align: center;
 }
+.box-login div h2,
+.box-login div p {
+  color: #FFF !important;
+}
 .box-login div button {
   border-radius: 50px;
   padding: 5px 50px;
   border: 1px #FFF solid;
+  background: #282828;
 }
 .box-login div button.one {
   background: #2EBD59;
@@ -259,7 +356,26 @@ form {
   display: block;
 }
 .box-login div button:hover {
-  border-color: red;
+  border-color: #FFF;
+}
+.info-click {
+  text-align: center;
+  margin: 10px 0;
+}
+.info-click a {
+  display: inline-block;
+  padding: 5px 20px;
+  border-radius: 25px;
+  background: #282828;
+  border: 1px #FFF solid;
+  color: #FFF;
+}
+.info-click a i {
+  font-size: 18px;
+  margin-right: 10px;
+}
+.info-click a:hover {
+  background: #1ED760;
 }
 /*
  *FIN DE ESTILOS DE CSS
@@ -269,5 +385,33 @@ form {
 @media screen and (min-width: 992px) {
   h1 {
     font-size: 36px !important;
+  }
+  .share {
+    text-align: left;
+  }
+  .share a {
+    margin-right: 10px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .song .info ul li {
+    text-align: left;
+    padding-left: 30px;
+    position: relative;
+  }
+  .song .info ul li i {
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+  }
+  .song .info ul li i {
+    left: -5px;
+  }
+  .info-click {
+    display: none;
   }
 }

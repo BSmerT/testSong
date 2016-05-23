@@ -76,11 +76,70 @@ form{
         .center-y;
     }
 }
+.preview-show{
+    //color: #1ED760;
+    color: #FFF;
+    top: 18%;
+    .center-x;
+}
+.fuck{
+    width: 300px;
+    height: 80px;
+    bottom: 5px;
+    .center-x;
+    z-index: -1;
+    i{
+        top: 20px;
+        position: relative;
+        color: #FFF;
+    }
+}
+.blur{
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+}
 /*
  *FIN DE CLASES MULTIPLES Y VARIABLES REPETITIVAS
  *
  *INCIO DE ESTILOS DE CSS
  */
+.navbar{
+    background: #000;
+    opacity: 0.6;
+    border-radius: 0;
+    margin-bottom: 0;
+    padding: 10px 0;
+}
+.bck-home{
+    &:after{
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #000;
+        opacity: 0.7;
+        z-index: -1;
+    }
+    &:before{
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: url('http://lorempixel.com/900/600/fashion') no-repeat;
+        background-size: cover;
+        z-index: -2;
+        .blur;
+    }
+    
+}
 #search{
     height: 50px;
     font-size: 20px;
@@ -111,40 +170,48 @@ form{
     color: #A0A0A0;
     .view{
         text-align: center;
+        //max-width: 300px;
         b,em{
             display: block;
-        }    
+        }
+        img,iframe{
+            margin: 0 29px 0 0;
+        }
     }
     .info{
-        p{
-            font-size: 18px;
-            .have-icon-left;
-            i{ color: #FFF; }
-        }
-        li{
-            margin-bottom: 7px;
-            a{ color: #A0A0A0; }
-            &:hover a{
-                color: #FFF;
-            }
+        margin-buttom: 40px;
+        ul{
+            margin-bottom: 20px;
+            li{
+                position: relative;
+                padding: 15px 0;
+                text-align: center;
+                i{
+                    //left: -5px;
+                    display: block;
+                }
+                a{ color: #A0A0A0; }
+            }   
         }
     }
 }
 .share{
-    height: 40px;
     margin-bottom: 10px;
+    text-align: center;
     a{
         color: #9E9E9E;
-        display: block;
+        display: inline-block;
         border-radius: 20px;
-        padding: 5px 20px;
+        padding: 5px 0;
+        width: 160px;
         background: #202020;
         border: 1px #9E9E9E solid;
-        .center-x;
+        text-align: center;
+        margin: 0 0 15px 0;
         i{
-            margin-right: 5px;
-            font-size: 18px;
+            font-size: 24px;
             vertical-align: middle;
+            margin-right: 5px;
         }
         &:hover{
             color: #FFF;
@@ -183,26 +250,60 @@ form{
             vertical-align: top;
             margin-bottom: 10px;
             cursor: pointer;
+            position: relative;
             img{
                 width: 100%;
+            }
+            &:hover{
+                &:before{
+                    content: "";
+                    position: absolute;
+                    width: 185px;
+                    height: 185px;
+                    background: #000;
+                    top: 0;
+                    opacity: 0.7;
+                }
             }
         }
     }
 }
 .box-login{
-    background: black;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
     position: fixed;
+    &:after, &:before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+    }
+    &:after{
+        opacity: 0.6;
+        z-index: -1;
+    }
+    &:before{
+        z-index: -2;
+        background: #000 url('http://lorempixel.com/900/600/nightlife') no-repeat;
+        background-size: cover;
+        .blur;
+    }
     div{
+        h2,p{
+            color: #FFF !important;
+        }
         .center-fix;
         text-align: center;
         button{
             border-radius: 50px;
             padding: 5px 50px;
             border: 1px #FFF solid;
+            background: #282828;
             &.one{
                 background: #2EBD59;
             }
@@ -210,9 +311,28 @@ form{
                 display: block;
             }
             &:hover{
-                border-color: red;
+                border-color: #FFF;
             }
         }
+    }
+}
+.info-click{
+    text-align: center;
+    margin: 10px 0;
+    a{
+       display: inline-block;
+       padding: 5px 20px;
+       border-radius: 25px;
+       background: #282828;
+       border: 1px #FFF solid;
+       color: #FFF;
+       i{
+            font-size: 18px;
+            margin-right: 10px;
+       }
+       &:hover{
+            background: #1ED760;
+       }
     }
 }
 /*
@@ -222,9 +342,22 @@ form{
  */
 @media screen and (min-width: 992px){
     h1{ font-size: 36px !important; }
-    .list{
-        &.top{
-            //text-align: left;    
+    .share{
+        text-align: left;
+        a{
+            margin-right: 10px;
         }
     }
+}
+@media screen and (min-width: 768px){
+    .song{
+        .info ul li{
+             text-align: left;
+            .have-icon-left;
+            i{
+                left: -5px;
+            }
+        }
+    }
+    .info-click{ display: none; }
 }
