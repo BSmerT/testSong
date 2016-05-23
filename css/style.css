@@ -64,6 +64,15 @@ form {
   -ms-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
 }
+.center-fix {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+}
 .have-icon-left {
   padding-left: 30px;
   position: relative;
@@ -215,9 +224,42 @@ form {
   display: inline-block;
   vertical-align: top;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 .list.top li img {
   width: 100%;
+}
+.box-login {
+  background: black;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+}
+.box-login div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.box-login div button {
+  border-radius: 50px;
+  padding: 5px 50px;
+  border: 1px #FFF solid;
+}
+.box-login div button.one {
+  background: #2EBD59;
+}
+.box-login div button:last-of-type {
+  display: block;
+}
+.box-login div button:hover {
+  border-color: red;
 }
 /*
  *FIN DE ESTILOS DE CSS

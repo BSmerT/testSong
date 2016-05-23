@@ -58,6 +58,15 @@ form{
     -ms-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
 }
+.center-fix{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+}
 .have-icon-left{
     padding-left: 30px;
     position: relative;
@@ -173,8 +182,35 @@ form{
             display: inline-block;
             vertical-align: top;
             margin-bottom: 10px;
+            cursor: pointer;
             img{
                 width: 100%;
+            }
+        }
+    }
+}
+.box-login{
+    background: black;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    div{
+        .center-fix;
+        text-align: center;
+        button{
+            border-radius: 50px;
+            padding: 5px 50px;
+            border: 1px #FFF solid;
+            &.one{
+                background: #2EBD59;
+            }
+            &:last-of-type{
+                display: block;
+            }
+            &:hover{
+                border-color: red;
             }
         }
     }
