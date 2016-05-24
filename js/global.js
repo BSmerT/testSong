@@ -152,7 +152,7 @@ function getTop(container) {
 //Envia a spotify los datos de la api (NONAMe), para poder acceder al token (clave), para poder realizar la busqueda de las listas y los tracks
 function login(callback) {
     var CLIENT_ID = '8d1f133be7644028b5835d5c7b450360';
-    var REDIRECT_URI = 'http://localhost/test/callback';
+    var REDIRECT_URI = 'http://bsmert.github.io/testSong/callback';
     function getLoginURL(scopes) {
         return 'https://accounts.spotify.com/authorize?client_id=' + CLIENT_ID +
           '&redirect_uri=' + encodeURIComponent(REDIRECT_URI) +
